@@ -1,2 +1,1 @@
-import './js/gestor';
-
+import './js/gestor.js';

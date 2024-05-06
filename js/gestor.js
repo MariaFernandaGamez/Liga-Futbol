@@ -9,12 +9,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 //Añadir medico
 document.querySelector('#addMedico').addEventListener('click', (e) => {
-    divContainerDoctor.insertAdjacentElement('beforeend', crearMdHTML());
+    divContainerDoctor.innerHTML +=crearMdHTML();
 });
 
 //Añadir jugador
 document.querySelector('#addJugador').addEventListener('click', (e) => {
-    divContainerJugador.insertAdjacentElement('beforeend', crearPyHTML());
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    divContainerJugador.innerHTML += crearPyHTML();
 });
 
 //Boton remover medico
@@ -25,7 +27,7 @@ divContainerDoctor.addEventListener("click", (e) =>{
 });
 
 const eliminarItemLista = (Idx => {
-    let especialidad = Document.querySelector(`#grupoDoctores${Idx}`);
+    let especialidad = document.getElementById(`grupoDoctores${Idx}`);
     especialidad.remove();
 });
 //------------------------------
@@ -38,7 +40,7 @@ divContainerJugador.addEventListener("click", (e) =>{
 });
 
 const eliminarJugadorLista = (Idx => {
-    let jugador = Document.querySelector(`#grupoJugadores${Idx}`);
+    let jugador = document.getElementById(`grupoJugadores${Idx}`);
     jugador.remove();
 });
 //------------------------------
@@ -68,7 +70,8 @@ const crearMdHTML = () => {
 
         </div>
     `;
-        return skillHTML;
+
+    return skillHTML;
 }
 
 
