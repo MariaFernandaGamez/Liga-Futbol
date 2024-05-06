@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="module" src="app.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row justify-content-md-center mt-3 ">
+
+            <div class="col-1 ">
+            </div>
+
+            <div class="col-10">
+
+                <div class="card">
+
+                    <div class="card-header">
+                      BetPlay
+                    </div>
+
+                    <div class="card-body">
+
+                      <h5 class="card-title">Registro de Equipos Liga BetPlay</h5>
+
+                      <form class="row g-3" id="frmDataLiga">
+
+                        <div class="col-md-6">
+
+                          <label for="nombreEquipo" class="form-label">  Nombre del equipo</label>
+                          <input type="email" class="form-control" id="nombreEquipo" name="nombreEquipo">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                          <label for="logoEquipo" class="form-label">Logo</label>
+                          <input type="text" class="form-control" id="logoEquipo" name="logoEquipo">
+
+                        </div>
+
+                        <div class="col-12">
+
+                          <label for="couchEquipo" class="form-label">Director técnico</label>
+                          <input type="text" class="form-control" name="couchEquipo"  id="couchEquipo">
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <label for="ciudadEquipo" class="form-label">Ciudad de orígen</label>
+                            <select id="ciudadEquipo" name="ciudadEquipo"  class="form-select">
+                              <option selected>Selecciona una ciudad...</option>
+                              <option>...</option>
+                            </select>
+  
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="ciudadEquipo" class="form-label">Fecha de fundación</label>
+                            <input type="date" class="form-control" id="fechaEquipo" name="ciudadEquipo">
+  
+                        </div>
+
+                        <div class="col-12">
+
+                            <div class="card border-warning mb-3" style="max-width: 100%;">
+
+                                <div class="card-header">Cuerpo médico</div>
+
+                                <div class="card-body">
+
+                                    <h5 class="card-title">Registre aquí el cuerpo médico</h5>
+                                    <button type="button" class="btn btn-success" id="addMedico">+</button>
+
+                                    <div class="containerDetallesDoctor">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="card border-info mb-3" style="max-width: 100%;">
+
+                                <div class="card-header">Plantel de jugadores</div>
+
+                                <div class="card-body">
+                                  <h5 class="card-title">Registre aquí los jugadores</h5>
+                                  <button type="button" class="btn btn-success" id="addJugador">+</button>
+
+                                  <div class="containerDetallesJugadores">
+                                    
+                                   
+                                  </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12">
+
+                          <button type="submit" class="btn btn-primary">Sign in</button>
+
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>  
+            </div>
+
+            <div class="col-1 ">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
